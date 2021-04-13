@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>U3 | Calculadora</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximun-scale=1">
+<meta name="description" content="Inicio">
+<meta name="author" content="Tristán N. Huerta">
+<meta name="keywords" content="Programación Web">
+<link href="estilo/css/bootstrap.css" rel="stylesheet">
+<link href="estilo/css/style.css" rel="stylesheet">
+</head>
+<body>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" href="index.html">Inicio</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="practica1.html">P1|Calculadora</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">P2|</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">P3|</a>
+  </li>
+</ul>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" href="lectura1.html">Lectura 1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Lectura 2</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Lectura 3</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Lectura 4</a>
+  </li>
+</ul>
+
+<!-------------------------------------------------------------------------------------Contents----->
+
+<br>
+<dl class="row">
+<dt class="col-sm-3" style="text-align: right;">Descripción de la práctica:</dt>
+  <dd class="col-sm-9" style="text-align: left;">Esta práctica tiene como objetivo el aprender a usar y/o entender algunas funciones de JavaScript, <br>funciones que nos acabaran ayudando a crear una calculadora como se puede ver a continuación...</dd>
+</dl>
+<br><br>
+
+<h6>Inserte los valores que desea sumar, restar, multiplicar o dividir a continuación:</h6>
+<form name="calc">
+<input type="Text" name="operando1" value="0" size="10">
+<input type="Text" name="operando2" value="0" size="10">
+<br>
+<input type="Button" name="" value=" + " onclick="calcula('+')">
+<input type="Button" name="" value=" - " onclick="calcula('-')">
+<input type="Button" name="" value=" X " onclick="calcula('*')">
+<input type="Button" name="" value=" / " onclick="calcula('/')">
+<br><br>
+<h6>Resultado:</h6>
+<input type="Text" name="resultado" value="0" size="10">
+</form>
+
+<script>
+function calcula(operacion){
+    var operando1 = document.calc.operando1.value
+    var operando2 = document.calc.operando2.value 
+    var result = eval(operando1 + operacion + operando2)
+    document.calc.resultado.value = result
+}
+</script> 
+<!-------------------------------------------------------------------------------------Contents----->
+
+</body>
+</html>
